@@ -8,17 +8,17 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 # Aofc2020 Day 1
 #================
-add_subdirectory(P1)
+add_subdirectory(Day1/P1)
 #reading the file
 #file(GLOB MY_FILES "*.txt")
 #file(COPY ${MY_FILES} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 configure_file(
-  ${CMAKE_CURRENT_SOURCE_DIR}/P1/input.txt 
+  ${CMAKE_CURRENT_SOURCE_DIR}/Day1/P1/input.txt 
   ${CMAKE_CURRENT_BINARY_DIR} COPYONLY 
 )
 # Aofc2020 Day 2
 #================
-add_subdirectory(P1/P2)
+add_subdirectory(Day1/P2)
 
 
 #####################
