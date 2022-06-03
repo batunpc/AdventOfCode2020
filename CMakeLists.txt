@@ -18,7 +18,7 @@ configure_file(
 )
 # Aofc2020 Day 2
 #================
-add_subdirectory(P2)
+add_subdirectory(P1/P2)
 
 
 #####################
