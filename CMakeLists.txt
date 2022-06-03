@@ -26,8 +26,8 @@ add_subdirectory(P2)
 #####################
 file(GLOB AOFC2020_SRC "main.cpp")
 add_executable(AOFC_SUB ${AOFC2020_SRC})
-target_include_directories(AOFC_SUB PUBLIC P1/include P2/include)
-target_link_libraries(AOFC_SUB LINK_PUBLIC P1 P2)
+#target_include_directories(AOFC_SUB PUBLIC P1/include P2/include)
+#target_link_libraries(AOFC_SUB LINK_PUBLIC P1 P2)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

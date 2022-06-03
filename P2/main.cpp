@@ -16,8 +16,10 @@ unsigned int challenge(unsigned int data[], unsigned int numData, unsigned int g
     int product;
     for (unsigned int i = 0; i < numData; i++) {
         for (unsigned int j = 0; j < numData - 1; j++) {
-            if (data[i] + data[j] == goal) {
-                product = data[j] * data[i];
+            for (unsigned int k = 0; k < numData - 2; k++) {
+                if (data[i] + data[j] + data[k] == goal) {
+                    product = data[j] * data[i] * data[k];
+                }
             }
         }
     }
