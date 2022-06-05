@@ -17,7 +17,7 @@ unsigned int challenge(unsigned int data[], unsigned int numData, unsigned int g
 
 int main(int argc, char* argv[]) {
     char* lines[256] = {0};
-    int numLines = countLines("input.txt", lines, 1000);
+    int numLines = countLines("input.txt", lines, 2000);
     unsigned int values[2000];
     for (int i = 0; i < numLines; i++) {
         values[i] = atoi(lines[i]);
