@@ -8,13 +8,13 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 # Aofc2020 Day 1
 #================
-add_subdirectory(Day1/P1)
-add_subdirectory(Day1/P2)
+add_subdirectory(Day1)
+
 #reading the file
 #file(GLOB MY_FILES "*.txt")
 #file(COPY ${MY_FILES} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 configure_file(
-  ${CMAKE_CURRENT_SOURCE_DIR}/Day1/P1/input.txt 
+  ${CMAKE_CURRENT_SOURCE_DIR}/Day1/input.txt 
   ${CMAKE_CURRENT_BINARY_DIR} COPYONLY 
 )
 # Aofc2020 Day 2
@@ -27,8 +27,8 @@ configure_file(
 #####################
 file(GLOB AOFC2020_SRC "main.cpp")
 add_executable(AOFC_SUB ${AOFC2020_SRC})
-#target_include_directories(AOFC_SUB PUBLIC P1/include P2/include)
-#target_link_libraries(AOFC_SUB LINK_PUBLIC P1 P2)
+target_include_directories(AOFC_SUB PUBLIC DAY1/include)
+target_link_libraries(AOFC_SUB LINK_PUBLIC DAY1)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
