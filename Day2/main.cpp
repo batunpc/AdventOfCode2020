@@ -16,5 +16,5 @@ int read_file(const char *fname) {
   return noc;
 }
 int main(int argc, char **argv) {
-  std::cout << "num of characters: " << read_file("input.txt") << std::endl;
+  std::cout << "num of characters: " << read_file("input2.txt") << std::endl;
 }
