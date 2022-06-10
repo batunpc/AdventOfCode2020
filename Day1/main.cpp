@@ -42,11 +42,11 @@ Your puzzle answer was 1015476. */
 
 #include "include/day1.h"
 using namespace DAY1;
-
+#define FILE_NAME "input.txt"
 int main() {
   my_class mc;
-  char *lines[256] = {0};
-  int numLines = mc.countLines("input.txt", lines, 1000);
+  char *lines[2000] = {0};
+  int numLines = mc.countLines(FILE_NAME, lines, 1000);
   unsigned int values[2000];
   for (int i = 0; i < numLines; i++) {
     values[i] = atoi(lines[i]);

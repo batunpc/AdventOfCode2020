@@ -12,18 +12,14 @@ add_subdirectory(Day1)
 #reading the file
 #file(GLOB MY_FILES "*.txt")
 #file(COPY ${MY_FILES} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY
-  ${CMAKE_CURRENT_SOURCE_DIR}/Day1/input.txt 
- DESTINATION ${CMAKE_CURRENT_BINARY_DIR} 
-)
 
 # Aofc2020 Day 2
 #================
 add_subdirectory(Day2)
-file(COPY
-  ${CMAKE_CURRENT_SOURCE_DIR}/Day2/input.txt 
-  DESTINATION  ${CMAKE_CURRENT_BINARY_DIR}  
-)
+#file(COPY
+#  ${CMAKE_CURRENT_SOURCE_DIR}/Day1/input.txt 
+#  DESTINATION  ${CMAKE_CURRENT_BINARY_DIR}  
+#)
 #####################
 # AOFC2020Project
 #####################
