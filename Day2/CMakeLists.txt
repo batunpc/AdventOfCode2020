@@ -7,6 +7,6 @@ add_executable(DAY2_EXEC "main.cpp")
 target_link_libraries(DAY2_EXEC PRIVATE DAY2)
 
 configure_file(
-  input.txt 
+  input2.txt 
   ${CMAKE_CURRENT_BINARY_DIR} 
 )

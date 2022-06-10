@@ -7,7 +7,7 @@ add_executable(DAY1_EXEC "main.cpp")
 target_link_libraries(DAY1_EXEC PRIVATE DAY1)
 
 configure_file(
-  input.txt 
+  input1.txt 
   ${CMAKE_CURRENT_BINARY_DIR} 
 )
 #add_custom_command(

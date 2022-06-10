@@ -42,7 +42,7 @@ Your puzzle answer was 1015476. */
 
 #include "include/day1.h"
 using namespace DAY1;
-#define FILE_NAME "input.txt"
+#define FILE_NAME "input1.txt"
 int main() {
   my_class mc;
   char *lines[2000] = {0};
