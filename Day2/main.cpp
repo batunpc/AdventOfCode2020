@@ -1,20 +1,20 @@
+#include "include/day2.hpp"
 #include <iostream>
+#include <sstream>
+#include <stdio.h>
+#include <string.h>
+using namespace DAY2;
 
-int read_file(const char *fname) {
-  char ch;
-  int noc = 0;
-  FILE *fp = fopen(fname, "r");
-  while (true) {
-    ch = fgetc(fp);
-    if (ch == EOF)
-      break;
-    std::cout << " " << ch << std::endl;
-    noc++;
-  }
+int main() {
 
-  fclose(fp);
-  return noc;
-}
-int main(int argc, char **argv) {
-  std::cout << "num of characters: " << read_file("input2.txt") << std::endl;
+  /*   char str[] = "Let's break this string into pieces.";
+
+    char *piece = strtok(str, " ");
+
+    while (piece != NULL) {
+      std::cout << piece << std::endl;
+      piece = strtok(NULL, " ");
+    } */
+  my_class d2;
+  d2.readLines();
 }
