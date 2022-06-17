@@ -11,6 +11,6 @@ private:
   int numOfLines = 0;
 
 public:
-  int readLines();
+  int readSplitLines();
 };
 } // namespace DAY2

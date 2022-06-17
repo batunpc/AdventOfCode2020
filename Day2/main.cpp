@@ -16,5 +16,5 @@ int main() {
       piece = strtok(NULL, " ");
     } */
   my_class d2;
-  d2.readLines();
+  d2.readSplitLines();
 }
