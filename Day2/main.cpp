@@ -1,20 +1,14 @@
+#include "include/day2.hpp"
 #include <iostream>
+#include <sstream>
+#include <stdio.h>
+#include <string.h>
+#define FILE_NAME "input2.txt"
 
-int read_file(const char *fname) {
-  char ch;
-  int noc = 0;
-  FILE *fp = fopen(fname, "r");
-  while (true) {
-    ch = fgetc(fp);
-    if (ch == EOF)
-      break;
-    std::cout << " " << ch << std::endl;
-    noc++;
-  }
+using namespace DAY2;
 
-  fclose(fp);
-  return noc;
-}
-int main(int argc, char **argv) {
-  std::cout << "num of characters: " << read_file("input.txt") << std::endl;
+int main() {
+
+  my_class d2;
+  d2.readLines(FILE_NAME);
 }
