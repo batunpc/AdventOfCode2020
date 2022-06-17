@@ -11,6 +11,7 @@ private:
   int numOfLines = 0;
 
 public:
-  int readSplitLines();
+  int readLines(const char *);
+  void splitLines(char *);
 };
 } // namespace DAY2
