@@ -30,7 +30,13 @@
                   "text": "-enable-pretty-printing",
                   "ignoreFailures": true
               }
-          ]
+          ],
+          "presentation": {
+            "hidden": false,
+            "group": "",
+            "order": 1,
+            "clear": true
+          }
       }
   ]
 }

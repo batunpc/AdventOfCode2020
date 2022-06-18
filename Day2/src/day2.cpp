@@ -11,6 +11,7 @@ int my_class::readLines(const char *file_name) {
 
   while ((read = getline(&line, &len, fp)) != -1) {
     splitLines(line);
+    // std::cout << "\n";
     numOfLines++;
   }
   return numOfLines;
@@ -19,9 +20,28 @@ int my_class::readLines(const char *file_name) {
 }
 
 void my_class::splitLines(char *lines) {
-  char *piece = strtok(lines, " ");
-  while (piece != NULL) {
-    std::cout << piece << std::endl;
-    piece = strtok(NULL, " ");
+
+  char *rangeSeg = strtok(lines, " ");
+  char *charSeg = strtok(NULL, " :");
+  char *password = strtok(NULL, " ");
+  // char *rangeMin = strtok(piece, "-");
+  // char *rangeMax = strtok(NULL, "-");
+  //  std::cout << std::stoi(rangeMin) << " " << std::stoi(rangeMax);
+  while (rangeSeg != NULL) {
+    std::cout << rangeSeg << std::endl;
+    while (charSeg != NULL) {
+      std::cout << charSeg << std::endl;
+      while (password != NULL) {
+        std::cout << password << std::endl;
+        break;
+      }
+      break;
+    }
+    break;
+    // rangeSeg = strtok(NULL, "-");
+    // charSeg = strtok(NULL, " ");
+    //  std::cout << piece << std::endl;
+    /* std::cout << rangeSeg << std::endl;
+    piece = strtok(NULL, " :"); */
   }
 }
