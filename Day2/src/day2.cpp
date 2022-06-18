@@ -1,45 +1,40 @@
 #include "include/day2.hpp"
 #include <cstring>
 #include <iostream>
+#define FILE_NAME "input2.txt"
 
 using namespace DAY2;
 
-int my_class::readLines(const char *file_name) {
-  FILE *fp = fopen(file_name, "r");
+int my_class::solve() {
+  int validPasses = 0;
+  FILE *fp = fopen(FILE_NAME, "r");
   if (fp == NULL)
     exit(EXIT_FAILURE);
-
   while ((read = getline(&line, &len, fp)) != -1) {
-    solve(line);
-    // std::cout << "\n";
-    numOfLines++;
-  }
-  return numOfLines;
-  fclose(fp);
-  exit(EXIT_SUCCESS);
-}
+    char *rangeSeg = strtok(line, " ");
+    char *charSeg = strtok(NULL, " :");
+    char *password = strtok(NULL, " ");
 
-void my_class::solve(char *lines) {
-  char *rangeSeg = strtok(lines, " ");
-  char *charSeg = strtok(NULL, " :");
-  char *password = strtok(NULL, " ");
-
-  char *rangeMin = strtok(lines, "-");
-  char *rangeMax = strtok(NULL, "-");
-  while (rangeSeg != NULL) {
-
-    std::cout << std::stoi(rangeMin) << " " << std::stoi(rangeMax) << std::endl;
-
-    while (charSeg != NULL) {
-      std::cout << charSeg << std::endl;
-      while (password != NULL) {
-        std::cout << password << std::endl;
+    while (rangeSeg != NULL) {
+      char *rangeMin = strtok(line, "-");
+      char *rangeMax = strtok(NULL, "-");
+      while (charSeg != NULL) {
+        while (password != NULL) {
+          if (std::stoi(rangeMin) <= charCount(charSeg, password) &&
+              charCount(charSeg, password) <= std::stoi(rangeMax)) {
+            validPasses += 1;
+          }
+          break;
+        }
         break;
       }
       break;
     }
-    break;
   }
+  return validPasses;
+
+  fclose(fp);
+  exit(EXIT_SUCCESS);
 }
 
 int my_class::charCount(const char *target, const char *line) {
