@@ -12,6 +12,7 @@ private:
 
 public:
   int readLines(const char *);
-  void splitLines(char *);
+  void solve(char *);
+  int charCount(const char *, const char *);
 };
 } // namespace DAY2

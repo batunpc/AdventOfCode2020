@@ -10,7 +10,7 @@ int my_class::readLines(const char *file_name) {
     exit(EXIT_FAILURE);
 
   while ((read = getline(&line, &len, fp)) != -1) {
-    splitLines(line);
+    solve(line);
     // std::cout << "\n";
     numOfLines++;
   }
@@ -19,16 +19,17 @@ int my_class::readLines(const char *file_name) {
   exit(EXIT_SUCCESS);
 }
 
-void my_class::splitLines(char *lines) {
-
+void my_class::solve(char *lines) {
   char *rangeSeg = strtok(lines, " ");
   char *charSeg = strtok(NULL, " :");
   char *password = strtok(NULL, " ");
-  // char *rangeMin = strtok(piece, "-");
-  // char *rangeMax = strtok(NULL, "-");
-  //  std::cout << std::stoi(rangeMin) << " " << std::stoi(rangeMax);
+
+  char *rangeMin = strtok(lines, "-");
+  char *rangeMax = strtok(NULL, "-");
   while (rangeSeg != NULL) {
-    std::cout << rangeSeg << std::endl;
+
+    std::cout << std::stoi(rangeMin) << " " << std::stoi(rangeMax) << std::endl;
+
     while (charSeg != NULL) {
       std::cout << charSeg << std::endl;
       while (password != NULL) {
@@ -38,10 +39,15 @@ void my_class::splitLines(char *lines) {
       break;
     }
     break;
-    // rangeSeg = strtok(NULL, "-");
-    // charSeg = strtok(NULL, " ");
-    //  std::cout << piece << std::endl;
-    /* std::cout << rangeSeg << std::endl;
-    piece = strtok(NULL, " :"); */
   }
+}
+
+int my_class::charCount(const char *target, const char *line) {
+  int count = 0;
+  for (size_t i = 0; i < strlen(line); i++) {
+    if (line[i] == *target) {
+      count += 1;
+    }
+  }
+  return count++;
 }
