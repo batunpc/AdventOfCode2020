@@ -20,18 +20,17 @@ int my_class::solve() {
       char *rangeMax = strtok(NULL, "-");
       while (charSeg != NULL) {
         while (password != NULL) {
+          // part 1
           /*       if (std::stoi(rangeMin) <= charCount(charSeg, password) &&
                     charCount(charSeg, password) <= std::stoi(rangeMax)) {
                   validPasses += 1;
                 } */
           if (*charSeg == password[std::stoi(rangeMin) - 1] &&
               *charSeg != password[std::stoi(rangeMax) - 1]) {
-            std::cout << password << std::endl;
             validPasses++;
           }
           if (*charSeg != password[std::stoi(rangeMin) - 1] &&
               *charSeg == password[std::stoi(rangeMax) - 1]) {
-            std::cout << password << std::endl;
             validPasses++;
           }
           break;
