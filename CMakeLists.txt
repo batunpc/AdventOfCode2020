@@ -11,12 +11,15 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 add_subdirectory(Day1)
 file(COPY Day1/input1.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
-
 # Aofc2020 Day 2
 #================
 add_subdirectory(Day2)
 file(COPY Day2/input2.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
+# Aofc2020 Day 3
+#================
+add_subdirectory(Day3)
+#file(COPY Day3/input2.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 #####################
 # AOFC2020Project
