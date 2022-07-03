@@ -6,6 +6,19 @@ add_compile_options(-ansi -pedantic -Wall -Wextra -Weffc++)
 
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
+if(CMAKE_BUILD_TYPE MATCHES "Debug")
+
+  set (CMAKE_CXX_FLAGS_DEBUG 
+      "${CMAKE_CXX_FLAGS_DEBUG} 
+      -fno-omit-frame-pointer -fsanitize=address -g")
+
+  set (CMAKE_LINKER_FLAGS_DEBUG 
+      "${CMAKE_LINKER_FLAGS_DEBUG} 
+      -fno-omit-frame-pointer -fsanitize=address -g")
+
+endif()
+
+
 # Aofc2020 Day 1
 #================
 add_subdirectory(Day1)
