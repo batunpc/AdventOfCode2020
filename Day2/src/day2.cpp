@@ -1,4 +1,4 @@
-#include "include/day2.hpp"
+#include "day2.hpp"
 #include <cstring>
 #include <iostream>
 #define FILE_NAME "input2.txt"

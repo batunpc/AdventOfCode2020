@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "compileCommands": "${config:cmake.buildDirectory}/compile_commands.json",
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+  }
+  

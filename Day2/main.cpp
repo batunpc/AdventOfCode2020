@@ -1,4 +1,4 @@
-#include "include/day2.hpp"
+#include "day2.hpp"
 #include <iostream>
 
 using namespace DAY2;

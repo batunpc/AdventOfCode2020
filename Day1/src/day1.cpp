@@ -1,5 +1,5 @@
 // day1.cpp
-#include "include/day1.h"
+#include "day1.h"
 #include <cstring>
 #include <iostream>
 
