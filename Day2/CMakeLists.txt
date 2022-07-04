@@ -1,5 +1,5 @@
 file(GLOB DAY2_SRC "src/*.cpp" )
-include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/inc")
 add_library(DAY2 STATIC ${DAY2_SRC})
 set_property(TARGET DAY2 PROPERTY POSITION_INDEPENDENT_CODE ON)
 
