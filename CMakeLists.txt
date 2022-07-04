@@ -32,14 +32,14 @@ file(COPY Day2/input2.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 # Aofc2020 Day 3
 #================
 add_subdirectory(Day3)
-#file(COPY Day3/input2.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY Day3/input3.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 #####################
 # AOFC2020Project
 #####################
 file(GLOB AOFC2020_SRC "main.cpp")
 add_executable(AOFC_SUB ${AOFC2020_SRC})
-target_include_directories(AOFC_SUB PUBLIC DAY1/include DAY2/include)
+target_include_directories(AOFC_SUB PUBLIC DAY1/inc DAY2/inc )
 target_link_libraries(AOFC_SUB LINK_PUBLIC DAY1 DAY2)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

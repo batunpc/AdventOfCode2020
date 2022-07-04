@@ -41,18 +41,20 @@ Your puzzle answer was 1015476. */
 #include <iostream>
 
 #include "day1.h"
+#include "io.h"
+
 using namespace DAY1;
 #define FILE_NAME "input1.txt"
 int main() {
-  my_class mc;
-  char *lines[2000] = {0};
-  int numLines = mc.countLines(FILE_NAME, lines, 1000);
-  unsigned int values[2000];
-  for (int i = 0; i < numLines; i++) {
-    values[i] = atoi(lines[i]);
-  }
-  std::cout << "=Challenge 1=\n"
-            << mc.challenge(values, numLines, 2020) << std::endl;
-  std::cout << "=Challenge 2=\n"
-            << mc.challenge2nd(values, numLines, 2020) << std::endl;
+  /*   my_class mc;
+    char *lines[2000] = {0};
+    int numLines = mc.countLines(FILE_NAME, lines, 1000);
+    unsigned int values[2000];
+    for (int i = 0; i < numLines; i++) {
+      values[i] = atoi(lines[i]);
+    }
+    std::cout << "=Challenge 1=\n"
+              << mc.challenge(values, numLines, 2020) << std::endl;
+    std::cout << "=Challenge 2=\n"
+              << mc.challenge2nd(values, numLines, 2020) << std::endl; */
 }
