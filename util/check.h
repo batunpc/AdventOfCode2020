@@ -4,19 +4,6 @@
 #include <cstdlib>
 #include <iostream>
 
-namespace check_detail {
-
-inline const absl::Status &AsStatus(const absl::Status &status) {
-  return status;
-}
-
-template <typename T>
-const absl::Status &AsStatus(const absl::StatusOr<T> &status_or) {
-  return status_or.status();
-}
-
-} // namespace check_detail
-
 #define CHECK(condition)                                                       \
   do {                                                                         \
     if (!(condition)) {                                                        \

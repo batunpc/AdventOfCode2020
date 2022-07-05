@@ -5,7 +5,6 @@
 #include <vector>
 
 namespace aoc2020_util {
-
 std::string ReadFile(const char *filename) {
   std::ifstream stream(filename);
   CHECK(stream);
@@ -19,4 +18,5 @@ std::string ReadFile(const char *filename) {
 
   return buffer;
 }
+
 } // namespace aoc2020_util
